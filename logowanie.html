@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap" rel="stylesheet">
+  <style>
+#formularz{
+  border:2px solid black;
+  margin-left:30%;
+  margin-right:30%;
+  font-size:20px;
+  background-color:rgba(0,0,0,0.25);;
+  color:white;  
+  margin-bottom:30px;
+  font-family: 'Akaya Telivigala', cursive;
+}
+#napis{
+color: white;
+  font-size:40px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: inline-block;
+  position: relative;
+  font-family: 'Merriweather', serif;
+  -webkit-mask-image: linear-gradient(75deg, rgba(249, 249, 252, 0.6) 20%, rgb(247, 247, 248) 30%, rgba(250, 250, 250, 1) 70%);
+  -webkit-mask-size: 200%;
+  animation: shine 3s linear infinite;
+  opacity:1;
+  margin-left:230px;
+}
+@keyframes shine {
+  from { -webkit-mask-position: 150%; }
+  to { -webkit-mask-position: -50%; }
+}
+body{
+  background-image: url("tapeta.jpg");
+}
+#napis1{
+    margin-left:320px;
+    font-size:20px;
+}
+#napis2{
+margin-left:345px;
+font-size: 20px;
+}
+#uzytkownik,#haslo,#czesc{
+    margin-left:270px;
+    width: 200px;
+    height: 40px;
+    background-color:lightskyblue;
+}
+#czesc{
+    margin-top:20px;
+    margin-left:275px;
+    width: 200px;
+    height: 30px;
+    margin-bottom:20px;
+    font-size: large;
+}
+#logowanie{
+  margin-left:820px;
+  font-size:20px;
+  
+}
+a{
+    color:white;
+}
+      </style>
+      <body>
+        <div id="formularz">
+            <div id="tekst">
+<b id="napis">Logowanie</b> 
+  <form action="logownako.php" method="POST">
+<p id="napis1">Uzytkownik</p><input type="text" id="uzytkownik" name="uzytkownik" /><br/>
+<p id="napis2">Haslo</p><input type="password" id="haslo" name="haslo1"/><br/>
+<input type=submit id="czesc" value="Zaloguj"/>
+<input type="checkbox" onclick="pokazhaslo()">Pokaz haslo       <!-- Admin ktory moze usuwac all: operator operator1, a przykladowy quest ktory moze kupowac: abcd abcdefghi-->
+</div>
+</div>
+
+
+<script>
+function pokazhaslo() {
+  var x = document.getElementById("haslo");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
+<div id="logowanie">
+    <a href="formularzhehe.html" >Nie masz konta? Zarejestruj sie! </a>
+</body>
+</head>
+</html>
